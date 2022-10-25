@@ -1,10 +1,42 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AllContext/AuthProvider';
 import RegPic from '../Assest/register.jpg'
 
 const Register = () => {
-    return (
+    const [error, setError] = useState(null)
+    const { SignUp } = useContext(AuthContext)
 
+    const SubmitForm = event => {
+
+        event.preventDefault()
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        const ConfrimPassword = form.ConfrimPassword.value;
+     
+        setError("")
+        if (password !== ConfrimPassword) {
+            setError("Password not matching !")
+            return;
+        }
+        if (password.length < 6) {
+            setError("Password must be at least 6 digit!")
+            return;
+        }
+        SignUp(email, password)
+            .then((res) => {
+                const user = res.user;
+                console.log(user);
+                form.reset()
+                setError("You are successfully registered ")
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage)
+            });
+    }
+    return (
         <>
             <div className="hero min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  mx-auto   ">
                 <div className="hero-content  flex-col lg:flex-row-reverse">
@@ -13,7 +45,8 @@ const Register = () => {
                         <img className='rounded-full ml-16 mt-4 w-[80%]' src={RegPic} alt="" />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form className="card-body">
+                        <form onSubmit={SubmitForm} className="card-body">
+                            <p className='text-xl bg-red-500 text-white rounded-full font-semibold'>{error}</p>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Full Name</span>
@@ -24,7 +57,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Photo Url</span>
                                 </label>
-                                <input type="text" placeholder="Photo Url" name='PhotoUrl' className="input input-bordered" required />
+                                <input type="text" placeholder="Photo Url" name='PhotoUrl' className="input input-bordered" />
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -43,7 +76,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Confrim Password</span>
                                 </label>
-                                <input type="password" name='password' placeholder="Confrim Password" className="input input-bordered" required />
+                                <input type="password" name='ConfrimPassword' placeholder="Confrim Password" className="input input-bordered" required />
                                 <label className="label">
                                 </label>
                             </div>

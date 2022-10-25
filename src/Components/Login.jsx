@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginPic from '../Assest/login.svg'
 import google from '../Assest/google.png'
 import git from '../Assest/git.png'
+import { AuthContext } from '../AllContext/AuthProvider';
+
+
 
 const Login = () => {
+    const [error, setError] = useState(null)
+    const { login } = useContext(AuthContext);
+
+    const SubmitForm = event => {
+        event.preventDefault()
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        login(email, password)
+            .then((res) => {
+                const user = res.user;
+                console.log(user);
+                setError("You are successfully logged in")
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage)
+            });
+        
+    }
+
     return (
         <>
             <div className="hero min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
@@ -14,7 +38,9 @@ const Login = () => {
                         <img src={LoginPic} alt="" />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form className="card-body">
+
+                        <p className='text-xl bg-red-500 text-white rounded-xl mt-4 mx-2 font-semibold'>{error}</p>
+                        <form onSubmit={SubmitForm} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>

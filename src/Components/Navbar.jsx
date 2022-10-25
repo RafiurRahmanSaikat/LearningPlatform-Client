@@ -6,7 +6,6 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <>
-            {/* bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl */}
             <div className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
                 <div className="px-4 py-1  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                     <div className="relative flex items-center justify-between">

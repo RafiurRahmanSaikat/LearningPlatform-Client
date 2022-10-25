@@ -6,10 +6,10 @@ const Register = () => {
     return (
 
         <>
-            <div className="hero min-h-screen bg-base-200 mx-auto   ">
+            <div className="hero min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  mx-auto   ">
                 <div className="hero-content  flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-center">
-                        <h1 className="text-5xl font-bold"> Please Register</h1>
+                        <h1 className="text-5xl text-white font-bold underline decoration-yellow-400"> Please Complete Registration</h1>
                         <img className='rounded-full ml-16 mt-4 w-[80%]' src={RegPic} alt="" />
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -37,7 +37,7 @@ const Register = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name='password' placeholder="Password" className="input input-bordered" required />
-                            
+
                             </div>
                             <div className="form-control">
                                 <label className="label">

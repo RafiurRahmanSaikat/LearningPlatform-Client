@@ -6,11 +6,12 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     return (
         <>
-            <div class="bg-violet-400">
-                <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        {/* bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl */}
+            <div class=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 outline outline-white">
+                <div class="px-4 py-1  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                     <div class="relative flex items-center justify-between">
                         <Link
-                            href="/"
+                           to='/'
                             aria-label="Company"
                             title="Company"
                             class="inline-flex items-center"
@@ -24,7 +25,7 @@ const Navbar = () => {
                         <ul class="flex items-center hidden space-x-8 lg:flex">
                             <li>
                                 <Link
-                                    href="/"
+                                   to='/'
                                     aria-label="Our product"
                                     title="Our product"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -34,7 +35,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/"
+                                   to='/'
                                     aria-label="Our product"
                                     title="Our product"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -44,7 +45,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/"
+                                   to='/'
                                     aria-label="Product pricing"
                                     title="Product pricing"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -54,7 +55,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link
-                                    href="/"
+                                   to='/'
                                     aria-label="About us"
                                     title="About us"
                                     class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -75,7 +76,7 @@ const Navbar = () => {
                         <ul class="flex items-center hidden space-x-8 lg:flex">
                             <li>
                                 <Link
-                                    href="/"
+                                   to='/login'
                                     class="inline-flex items-center justify-center text-xl font-medium text-white rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                     aria-label="Sign up"
                                     title="Sign up"
@@ -132,7 +133,7 @@ const Navbar = () => {
                                             <ul class="space-y-4">
                                                 <li>
                                                     <Link
-                                                        href="/"
+                                                       to='/'
                                                         aria-label="Our product"
                                                         title="Our product"
                                                         class="font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
@@ -142,7 +143,7 @@ const Navbar = () => {
                                                 </li>
                                                 <li>
                                                     <Link
-                                                        href="/"
+                                                       to='/'
                                                         aria-label="Our product"
                                                         title="Our product"
                                                         class="font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
@@ -152,7 +153,7 @@ const Navbar = () => {
                                                 </li>
                                                 <li>
                                                     <Link
-                                                        href="/"
+                                                       to='/'
                                                         aria-label="Product pricing"
                                                         title="Product pricing"
                                                         class="font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
@@ -162,7 +163,7 @@ const Navbar = () => {
                                                 </li>
                                                 <li>
                                                     <Link
-                                                        href="/"
+                                                       to='/'
                                                         aria-label="About us"
                                                         title="About us"
                                                         class="font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"

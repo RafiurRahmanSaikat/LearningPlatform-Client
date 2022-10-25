@@ -1,52 +1,52 @@
 import React from 'react';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const AllCourse = () => {
+    const CourseData = useLoaderData();
+    console.log(CourseData[0]);
+
+
     return (
         <div>
-            <section class="bg-white dark:bg-gray-900">
-                <div class="container px-6 py-12 mx-auto">
-                    <h1 class="text-2xl font-semibold text-gray-800 lg:text-4xl dark:text-white">ALL COURSE</h1>
+            <section className="bg-white dark:bg-gray-900">
+                <div className="container px-6 py-12 mx-auto">
+                    <h1 className="text-2xl font-semibold text-gray-800 lg:text-4xl dark:text-white">ALL COURSE</h1>
 
-                    <div class="mt-8 xl:mt-16 lg:flex lg:-mx-12">
-                        <div class="lg:mx-12">
-                            <h1 class="text-xl font-semibold text-gray-800 dark:text-white">Table of Content</h1>
+                    <div className="mt-8 xl:mt-16 lg:flex lg:-mx-12">
+                        <div className="lg:mx-12">
+                            <h1 className="text-2xl font-semibold text-orange-500  ">Available Courses</h1>
 
-                            <div class="mt-4 space-y-4 lg:mt-8">
-                                <a href="#" class="block text-blue-500 dark:text-blue-400 hover:underline">Web design</a>
-                                <a href="#" class="block text-gray-500 dark:text-gray-300 hover:underline">App design</a>
-                                <a href="#" class="block text-gray-500 dark:text-gray-300 hover:underline">Branding</a>
-                                <a href="#" class="block text-gray-500 dark:text-gray-300 hover:underline">Animation</a>
+                            <div className="mt-4 space-y-4 lg:mt-8">
+                                {
+                                    CourseData.map((course) =>
+                                        <Link to={`/course-details/${course.id}`}
+                                            key={course.id}
+                                            className="block text-xl text-white hover:bg-red-500 rounded-lg">
+                                            {course.category}
+                                        </Link>)
+                                }
                             </div>
                         </div>
+                        <div className="flex-1 mt-8 lg:mx-12 lg:mt-0">
+                            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 ">
+                                {
+                                    CourseData.map((course) =>
+                                        <div key={course.id}>
+                                            <Link to={`/course-details/${course.id}`} key={course.id}>
 
-                        <div class="flex-1 mt-8 lg:mx-12 lg:mt-0">
-                            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3 ">
-                                <div>
-                                    <img class="object-cover w-full rounded-lg h-96 "
-                                        src="https://images.unsplash.com/photo-1621111848501-8d3634f82336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1565&q=80"
-                                        alt="" />
-                                    <h2 class="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">Best website
-                                        collections</h2>
-                                    <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Website</p>
-                                </div>
+                                                <div>
+                                                    
+                                                    <img className="object-cover w-full rounded-lg h-96 "
+                                                        src={course.img}
+                                                        alt="" />
 
-                                <div>
-                                    <img class="object-cover w-full rounded-lg h-96 "
-                                        src="https://images.unsplash.com/photo-1621609764180-2ca554a9d6f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-                                        alt="" />
-                                    <h2 class="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">Block of Ui kit
-                                        collections</h2>
-                                    <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Ui kit</p>
-                                </div>
-
-                                <div>
-                                    <img class="object-cover w-full rounded-lg h-96 "
-                                        src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                        alt="" />
-                                    <h2 class="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">Ton’s of mobile
-                                        mockup</h2>
-                                    <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Mockups</p>
-                                </div>
+                                                    <p className='font-semibold mt-2 text-orange-400'><span className='text-white text-sm'>Price :</span> {course.price} TK/=</p>
+                                                    <p className="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">{course.title}</p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    )
+                                }
                             </div>
                         </div>
                     </div>

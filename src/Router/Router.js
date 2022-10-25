@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AllCourse from "../Components/AllCourse";
 import CourseDetails from "../Components/CourseDetails";
 import Error404 from "../Components/Error404";
+import FAQ, { Faq } from "../Components/FAQ";
 import Home from "../Components/Home";
 import Login from "../Components/Login";
 import Register from "../Components/Register";
@@ -29,7 +30,7 @@ export const router = createBrowserRouter([
                 },
                 element: <CourseDetails></CourseDetails>
             },
-            { path: 'FAQ', element: <h1>FAQ IS LOADING</h1> },
+            { path: 'FAQ', element: <FAQ></FAQ> },
         ])
     },
     {

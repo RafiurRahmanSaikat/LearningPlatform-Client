@@ -2,15 +2,12 @@ import React from 'react';
 
 const FAQ = () => {
     return (
-        <div>
+        <div className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'>
 
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
                     <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-                        <div>
-
-                        </div>
-                        <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                        <h2 className="max-w-lg  mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-white sm:text-4xl md:mx-auto">
                             <span className="relative inline-block">
                                 <svg
                                     viewBox="0 0 52 24"
@@ -38,7 +35,7 @@ const FAQ = () => {
                             </span>{' '}
                             is learning platform in bangladesh
                         </h2>
-                        <p className="text-base text-gray-700 md:text-lg">
+                        <p className="text-base text-white md:text-lg">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                             accusantium doloremque rem aperiam, eaque ipsa quae.
                         </p>
@@ -48,10 +45,10 @@ const FAQ = () => {
                     <div className="grid grid-cols-1 gap-16 row-gap-8 lg:grid-cols-2">
                         <div className="space-y-8">
                             <div>
-                                <p className="mb-4 text-xl font-medium">
+                                <p className="mb-4 text-xl text-white font-medium">
                                     The quick, brown fox jumps over a lazy dog?
                                 </p>
-                                <p className="text-gray-700">
+                                <p className="text-slate-50">
                                     Space, the final frontier. These are the voyages of the Starship
                                     Enterprise. Its five-year mission: to explore strange new
                                     worlds.
@@ -62,10 +59,10 @@ const FAQ = () => {
                                 </p>
                             </div>
                             <div>
-                                <p className="mb-4 text-xl font-medium">
+                                <p className="mb-4 text-xl text-white font-medium">
                                     The first mate and his Skipper too will do?
                                 </p>
-                                <p className="text-gray-700">
+                                <p className="text-slate-50">
                                     Well, the way they make shows is, they make one show. That
                                     show's called a pilot.
                                     <br />
@@ -78,10 +75,10 @@ const FAQ = () => {
                                 </p>
                             </div>
                             <div>
-                                <p className="mb-4 text-xl font-medium">
+                                <p className="mb-4 text-xl text-white font-medium">
                                     Is the Space Pope reptilian!?
                                 </p>
-                                <p className="text-gray-700">
+                                <p className="text-slate-50">
                                     A flower in my garden, a mystery in my panties. Heart attack
                                     never stopped old Big Bear. I didn't even know we were calling
                                     him Big Bear.
@@ -90,10 +87,10 @@ const FAQ = () => {
                         </div>
                         <div className="space-y-8">
                             <div>
-                                <p className="mb-4 text-xl font-medium">
+                                <p className="mb-4 text-xl text-white font-medium">
                                     How much money you got on you?
                                 </p>
-                                <p className="text-gray-700">
+                                <p className="text-slate-50">
                                     The first mate and his Skipper too will do their very best to
                                     make the others comfortable in their tropic island nest.
                                     <br />
@@ -105,10 +102,10 @@ const FAQ = () => {
                                 </p>
                             </div>
                             <div>
-                                <p className="mb-4 text-xl font-medium">
+                                <p className="mb-4 text-xl text-white font-medium">
                                     Galaxies Orion's sword globular star cluster?
                                 </p>
-                                <p className="text-gray-700">
+                                <p className="text-slate-50">
                                     A business big enough that it could be listed on the NASDAQ goes
                                     belly up. Disappears!
                                     <br />
@@ -118,10 +115,10 @@ const FAQ = () => {
                                 </p>
                             </div>
                             <div>
-                                <p className="mb-4 text-xl font-medium">
+                                <p className="mb-4 text-xl text-white font-medium">
                                     When has justice ever been as simple as a rule book?
                                 </p>
-                                <p className="text-gray-700">
+                                <p className="text-slate-50">
                                     This is not about revenge. This is about justice. A lot of
                                     things can change in twelve years, Admiral. Well, that's
                                     certainly good to know. About four years. I got tired of hearing

@@ -9,7 +9,7 @@ import { AuthContext } from '../AllContext/AuthProvider';
 
 const Login = () => {
     const [error, setError] = useState(null)
-    const { login } = useContext(AuthContext);
+    const { login, GoogleSignIn, GithubLogIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const from = location?.state?.from?.pathname || "/";
@@ -68,12 +68,14 @@ const Login = () => {
                         </form>
 
                         <section className=' p-2 mx-auto'>
-                            <button className='flex outline-2 outline  rounded-lg items-center justify-between px-1'>
+                            <button onClick={() => { GoogleSignIn().then(res => console.log(res?.user)).catch(error => setError(error?.message)) }}
+                                className='flex outline-2 outline  rounded-lg items-center justify-between px-1'>
                                 <img className='w-12 bg-white rounded-full' src={google} alt="" />
                                 <p className='font-semibold text-md '>Sign in with Google</p>
 
                             </button>
-                            <button className=' flex  mt-2 mb-2 outline-2 outline  rounded-lg  items-center justify-between px-1'>
+                            <button onClick={() => { GithubLogIn().then(res => console.log(res?.user)).catch(error => setError(error?.message)) }}
+                                className=' flex  mt-2 mb-2 outline-2 outline  rounded-lg  items-center justify-between px-1'>
                                 <img className='w-8  m-2' src={git} alt="" />
                                 <p className='font-semibold text-md '> Sign in with Google</p>
                             </button>

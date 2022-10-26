@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <>
             <div className=" bg-gray-800 py-2 outline outline-orange-500 outline-4 ">
-            
+
                 <div className="px-4 py-1  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                     <div className="relative flex items-center justify-between">
                         <Link
@@ -80,9 +80,10 @@ const Navbar = () => {
                                             <img className='inline-flex items-center justify-center  w-14 ml-8 rounded-full' src={user?.photoURL} alt=""
                                                 title={user?.displayName} />
 
+                                            <p className="inline-flex btn-circle bg-blue-500 text-white font-semibold mr-4 items-center justify-center">{user?.displayName}</p>
                                             <Link
                                                 to='/login'
-                                                className="inline-flex items-center justify-center text-sm font-semibold text-white btn border-none hover:bg-red-700 bg-red-600  rounded-full     "
+                                                className="inline-flex items-center justify-center text-sm font-semibold text-white btn border-none hover:bg-red-700 bg-red-600 rounded-full     "
                                                 aria-label="Logout"
                                                 title="Logout"
                                                 onClick={LogOut}
@@ -150,7 +151,44 @@ const Navbar = () => {
                                                     </svg>
                                                 </button>
                                             </div>
+
+
                                         </div>
+                                        {
+                                            user?.uid ?
+
+                                                <>
+                                                    <div className='flex-col'>
+                                                        <img className='mx-auto mb-2 w-14 rounded-full' src={user?.photoURL} alt=""
+                                                            title={user?.displayName} />
+                                                        <Link
+                                                            to='/login'
+                                                            className="text-sm font-medium  text-white px-3 py-1 border-none hover:bg-red-700 bg-red-600  rounded-2xl      "
+                                                            aria-label="Logout"
+                                                            title="Logout"
+                                                            onClick={LogOut}
+                                                        >
+                                                            Logout
+                                                        </Link>
+                                                    </div>
+
+
+                                                </>
+                                                :
+                                                <>
+                                                    <div className='flex-col'>
+                                                        <img className='mx-auto mb-2 w-14 rounded-full' src={avatar} alt="" />
+                                                        <Link
+                                                            to='/login'
+                                                            className="text-sm font-medium  text-white px-3 py-1 border-none hover:bg-red-700 bg-red-600  rounded-2xl "
+                                                            aria-label="Login"
+                                                            title="Login"
+                                                        >
+                                                            Login
+                                                        </Link>
+                                                    </div>
+                                                </>
+                                        }
                                         <nav>
                                             <ul className="space-y-4">
                                                 <li>

@@ -9,9 +9,9 @@ const Home = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
                         <h1 className="mb-5 text-[4vw] font-bold">You are Welcome to <br />
-                         <span className='text-red-500'>Tech World!!</span></h1>
-                        <p className="mb-5 text-white ">Tech world is learning platform in Bangladesh where you can learn different types of technology and we provide you the highest opportunity to get your Goal !!</p>
-                       <Link to='/register'> <button  className="btn btn-primary">Get Started</button></Link>
+                            <span className='text-red-500 '>Tech World!!</span></h1>
+                        <p className="mb-5 text-white text-xl">Tech world is learning platform in Bangladesh where you can learn different types of technology and we provide you the highest opportunity to get your Goal !!</p>
+                        <Link to='/course'> <button className="btn btn-primary">Get Started</button></Link>
                     </div>
                 </div>
             </div>

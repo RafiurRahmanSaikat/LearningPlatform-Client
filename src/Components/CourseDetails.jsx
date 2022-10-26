@@ -59,13 +59,9 @@ const CourseDetails = () => {
                         <p className="leading-relaxed text-gray-300">{description}</p>
                         <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                         </div>
-                        <div className="flex">
-                            <p className="title-font font-medium text-2xl text-gray-100">$  {price} TK/= </p>
-
-
-
-                            <Link to={`/purchase/${id}`} className="flex ml-auto text-white  bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Purchase</Link>
-                        </div>
+                            <Link to={`/purchase/${id}`} className="mx-auto text-white  bg-red-500 border-0 py-3 px-8 
+                            focus:outline-none hover:bg-red-600 rounded">Purchase</Link>
+                        
                     </div>
                 </div>
             </div>

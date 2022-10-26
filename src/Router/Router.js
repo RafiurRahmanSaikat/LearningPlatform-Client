@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
                 loader: ({ params }) => {
                     return fetch(`https://techworld-psi.vercel.app/${params.id}`)
                 },
-                element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>
+                element: <CourseDetails></CourseDetails>
             },
             {
                 path: 'purchase/:id',

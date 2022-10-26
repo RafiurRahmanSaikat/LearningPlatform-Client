@@ -48,7 +48,7 @@ const Register = () => {
     }
     return (
         <>
-            <div className="hero min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  mx-auto   ">
+            <div className="hero min-h-screen bg-gray-800  mx-auto   ">
                 <div className="hero-content  flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-center">
                         <h1 className="text-5xl text-white font-bold underline decoration-yellow-400"> Please Complete Registration</h1>

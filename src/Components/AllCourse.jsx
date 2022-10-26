@@ -8,7 +8,7 @@ const AllCourse = () => {
 
     return (
         <div>
-            <section className="bg-white dark:bg-gray-900">
+            <section className="bg-white dark:bg-gray-800">
                 <div className="container px-6 py-12 mx-auto">
                     <h1 className="text-2xl font-semibold text-gray-800 lg:text-4xl dark:text-white">ALL COURSE</h1>
 
@@ -35,7 +35,7 @@ const AllCourse = () => {
                                             <Link to={`/course-details/${course.id}`} key={course.id}>
 
                                                 <div>
-                                                    
+
                                                     <img className="object-cover w-full rounded-lg h-96 "
                                                         src={course.img}
                                                         alt="" />

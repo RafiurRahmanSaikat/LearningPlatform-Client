@@ -3,6 +3,7 @@ import logo from '../Assest/favicon.jpg'
 import avatar from '../Assest/avatar.png'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AllContext/AuthProvider';
+import Theme from './Theme';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { user, LogOut } = useContext(AuthContext);
@@ -11,7 +12,8 @@ const Navbar = () => {
 
     return (
         <>
-            <div className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
+            <div className=" bg-gray-800 py-2 outline outline-orange-500 outline-4 ">
+            
                 <div className="px-4 py-1  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                     <div className="relative flex items-center justify-between">
                         <Link
@@ -64,15 +66,7 @@ const Navbar = () => {
                                     title="About us"
                                     className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                                 >
-                                    <label htmlFor="Toggle2" className="inline-flex items-center space-x-4 cursor-pointer dark:text-white">
-                                        <span>Dark</span>
-                                        <span className="relative">
-                                            <input id="Toggle2" type="checkbox" className="hidden peer" />
-                                            <div className="w-10 h-4 rounded-full shadow dark:bg-gray-600 peer-checked:dark:bg-white"></div>
-                                            <div className="absolute left-0 w-6 h-6 rounded-full shadow -inset-y-1 peer-checked:right-0 peer-checked:left-auto dark:bg-violet-400"></div>
-                                        </span>
-                                        <span>Light</span>
-                                    </label>
+                                    <Theme></Theme>
 
                                 </Link>
                             </li>
@@ -83,7 +77,9 @@ const Navbar = () => {
                                     user?.uid ?
 
                                         <>
-                                            <img className='inline-flex items-center justify-center  w-14 ml-8 rounded-full' src={user?.photoURL} alt="" title={user?.displayName} />
+                                            <img className='inline-flex items-center justify-center  w-14 ml-8 rounded-full' src={user?.photoURL} alt=""
+                                                title={user?.displayName} />
+
                                             <Link
                                                 to='/login'
                                                 className="inline-flex items-center justify-center text-sm font-semibold text-white btn border-none hover:bg-red-700 bg-red-600  rounded-full     "
@@ -194,15 +190,7 @@ const Navbar = () => {
                                                         title="About us"
                                                         className="font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
                                                     >
-                                                        <label htmlFor="Toggle2" className="inline-flex items-center space-x-4 cursor-pointer dark:text-red-900">
-                                                            <span>Dark</span>
-                                                            <span className="relative">
-                                                                <input id="Toggle2" type="checkbox" className="hidden peer" />
-                                                                <div className="w-10 h-4 rounded-full shadow dark:bg-gray-600 peer-checked:dark:bg-violet-400"></div>
-                                                                <div className="absolute left-0 w-6 h-6 rounded-full shadow -inset-y-1 peer-checked:right-0 peer-checked:left-auto dark:bg-violet-400"></div>
-                                                            </span>
-                                                            <span>Light</span>
-                                                        </label>
+                                                        <Theme></Theme>
                                                     </Link>
                                                 </li>
                                             </ul>
@@ -212,6 +200,7 @@ const Navbar = () => {
                             )}
                         </div>
                     </div>
+
                 </div>
             </div>
         </>

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LoginPic from '../Assest/login.svg'
 import google from '../Assest/google.png'
 import git from '../Assest/git.png'
@@ -10,17 +10,22 @@ import { AuthContext } from '../AllContext/AuthProvider';
 const Login = () => {
     const [error, setError] = useState(null)
     const { login } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location?.state?.from?.pathname || "/";
 
     const SubmitForm = event => {
         event.preventDefault()
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+
         login(email, password)
             .then((res) => {
                 const user = res.user;
                 console.log(user);
                 setError("You are successfully logged in")
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -31,7 +36,7 @@ const Login = () => {
 
     return (
         <>
-            <div className="hero min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+            <div className="hero min-h-screen bg-gray-800">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-center">
                         <h1 className="text-5xl mb-4 font-bold  text-white font-bold underline decoration-yellow-400">Login Please !</h1>

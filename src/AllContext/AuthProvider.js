@@ -39,7 +39,7 @@ const AuthProvider = ({ children }) => {
 
     }
 
-    const AuthInfo = { SignUp, login, LogOut, user, setProfile }
+    const AuthInfo = { SignUp, login, LogOut, user, setProfile, loading }
 
     return (
 

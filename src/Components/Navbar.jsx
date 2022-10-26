@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import logo from '../Assest/favicon.jpg'
 import avatar from '../Assest/avatar.png'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AllContext/AuthProvider';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { user, LogOut } = useContext(AuthContext);
+    console.log(user);
+
+
     return (
         <>
             <div className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
@@ -20,7 +25,7 @@ const Navbar = () => {
                                 Tech World
                             </span>
                         </Link>
-                        {/*  User Profile Picture */}
+
                         <ul className="flex items-center hidden space-x-8 lg:flex">
                             <li>
                                 <Link
@@ -74,15 +79,37 @@ const Navbar = () => {
                         </ul>
                         <ul className="flex items-center hidden space-x-8 lg:flex">
                             <li>
-                                <Link
-                                    to='/login'
-                                    className="inline-flex items-center justify-center text-xl font-medium text-white rounded bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                                    aria-label="Sign up"
-                                    title="Sign up"
-                                >
-                                    <img className='w-14 ml-8 rounded-full' src={avatar} alt="" />
-                                    Login
-                                </Link>
+                                {
+                                    user?.uid ?
+
+                                        <>
+                                            <img className='inline-flex items-center justify-center  w-14 ml-8 rounded-full' src={user?.photoURL} alt="" title={user?.displayName} />
+                                            <Link
+                                                to='/login'
+                                                className="inline-flex items-center justify-center text-sm font-semibold text-white btn border-none hover:bg-red-700 bg-red-600  rounded-full     "
+                                                aria-label="Logout"
+                                                title="Logout"
+                                                onClick={LogOut}
+                                            >
+                                                Logout
+                                            </Link>
+
+
+                                        </>
+                                        :
+                                        <>
+                                            <img className='inline-flex items-center justify-center  w-14 ml-8 rounded-full ' src={avatar} alt="" />
+                                            <Link
+                                                to='/login'
+                                                className="inline-flex items-center justify-center text-sm font-semibold text-white btn border-none hover:bg-green-700 bg-green-600  rounded-full    "
+                                                aria-label="Login"
+                                                title="Login"
+                                            >
+                                                Login
+                                            </Link>
+                                        </>
+                                }
+
                             </li>
                         </ul>
                         <div className="lg:hidden">

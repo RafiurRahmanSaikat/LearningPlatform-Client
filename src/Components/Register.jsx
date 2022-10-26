@@ -5,16 +5,20 @@ import RegPic from '../Assest/register.jpg'
 
 const Register = () => {
     const [error, setError] = useState(null)
-    const { SignUp } = useContext(AuthContext)
+    const { SignUp, setProfile } = useContext(AuthContext)
 
     const SubmitForm = event => {
-
         event.preventDefault()
         const form = event.target;
+        const name = form.name.value;
+        const photo = form.PhotoUrl.value;
+        const mobile = form.phoneNumber.value;
         const email = form.email.value;
         const password = form.password.value;
         const ConfrimPassword = form.ConfrimPassword.value;
-     
+        console.log(mobile, name);
+        const Profile = { displayName: name, photoURL: photo, phoneNumber: mobile }
+
         setError("")
         if (password !== ConfrimPassword) {
             setError("Password not matching !")
@@ -29,6 +33,12 @@ const Register = () => {
                 const user = res.user;
                 console.log(user);
                 form.reset()
+                setProfile(Profile)
+                    .then(result => { })
+                    .catch((error) => {
+                        const errorMessage = error.message;
+                        setError(errorMessage)
+                    })
                 setError("You are successfully registered ")
             })
             .catch((error) => {
@@ -64,6 +74,12 @@ const Register = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="email" placeholder="Email" name='email' className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Your Contact Number</span>
+                                </label>
+                                <input type="Number" placeholder="Contact Number" name='phoneNumber' className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">

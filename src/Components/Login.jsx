@@ -26,7 +26,7 @@ const Login = () => {
                 const errorMessage = error.message;
                 setError(errorMessage)
             });
-        
+
     }
 
     return (

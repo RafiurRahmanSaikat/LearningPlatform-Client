@@ -4,10 +4,12 @@ import LoginPic from '../Assest/login.svg'
 import google from '../Assest/google.png'
 import git from '../Assest/git.png'
 import { AuthContext } from '../AllContext/AuthProvider';
+import { GithubAuthProvider } from 'firebase/auth';
 
 
 
 const Login = () => {
+
     const [error, setError] = useState(null)
     const { login, GoogleSignIn, GithubLogIn } = useContext(AuthContext);
     const location = useLocation();
@@ -32,6 +34,22 @@ const Login = () => {
                 setError(errorMessage)
             });
 
+    }
+    const GitLogin = () => {
+        GithubLogIn()
+            .then((result) => {
+                
+                navigate(from, { replace: true })
+            })
+
+            .catch(error => setError(error?.message))
+    }
+
+
+    const GoogleLogIn = () => {
+        GoogleSignIn()
+            .then(res => navigate(from, { replace: true }))
+            .catch(error => setError(error?.message))
     }
 
     return (
@@ -68,13 +86,14 @@ const Login = () => {
                         </form>
 
                         <section className=' p-2 mx-auto'>
-                            <button onClick={() => { GoogleSignIn().then(res => console.log(res?.user)).catch(error => setError(error?.message)) }}
+                            <button onClick={GoogleLogIn}
                                 className='flex outline-2 outline  rounded-lg items-center justify-between px-1'>
                                 <img className='w-12 bg-white rounded-full' src={google} alt="" />
                                 <p className='font-semibold text-md '>Sign in with Google</p>
 
                             </button>
-                            <button onClick={() => { GithubLogIn().then(res => console.log(res?.user)).catch(error => setError(error?.message)) }}
+                            <button onClick={GitLogin}
+
                                 className=' flex  mt-2 mb-2 outline-2 outline  rounded-lg  items-center justify-between px-1'>
                                 <img className='w-8  m-2' src={git} alt="" />
                                 <p className='font-semibold text-md '> Sign in with Google</p>

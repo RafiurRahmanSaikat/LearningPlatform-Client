@@ -51,7 +51,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link
-                                    to='/'
+                                    to='/blogs'
                                     aria-label="Product pricing"
                                     title="Product pricing"
                                     className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -61,10 +61,7 @@ const Navbar = () => {
                             </li>
                             <li>
                                 <Link
-                                    to='/'
-                                    aria-label="About us"
-                                    title="About us"
-                                    className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                                    className="font-medium tracking-wide text-gray-300 transition-colors duration-2000 hover:text-teal-accent-400"
                                 >
                                     <Theme></Theme>
 
@@ -80,7 +77,7 @@ const Navbar = () => {
                                             <img className='inline-flex items-center justify-center  w-14 ml-8 rounded-full' src={user?.photoURL} alt=""
                                                 title={user?.displayName} />
 
-                                            <p className="inline-flex btn-circle bg-blue-500 text-white font-semibold mr-4 items-center justify-center">{user?.displayName}</p>
+                                            <p className="inline-flex btn-circle w-auto px-1 ml-2 bg-blue-500 text-white font-semibold mr-4 items-center justify-center">{user?.displayName}</p>
                                             <Link
                                                 to='/login'
                                                 className="inline-flex items-center justify-center text-sm font-semibold text-white btn border-none hover:bg-red-700 bg-red-600 rounded-full     "
@@ -161,6 +158,7 @@ const Navbar = () => {
                                                     <div className='flex-col'>
                                                         <img className='mx-auto mb-2 w-14 rounded-full' src={user?.photoURL} alt=""
                                                             title={user?.displayName} />
+                                                            <p className='my-2'>{user?.displayName}</p>
                                                         <Link
                                                             to='/login'
                                                             className="text-sm font-medium  text-white px-3 py-1 border-none hover:bg-red-700 bg-red-600  rounded-2xl      "

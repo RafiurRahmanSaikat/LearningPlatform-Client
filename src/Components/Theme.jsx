@@ -7,8 +7,8 @@ const Theme = () => {
 
 
             <Switch.Group>
-                <div className="flex items-center">
-                    <Switch.Label className=" mr-4">Dark/Light</Switch.Label>
+                <div className="flex-col items-center">
+                    <Switch.Label className="text-xs text-white bg-orange-600 p-2 rounded-full mr-4">Dark/Light</Switch.Label>
                     <Switch
                         checked={enabled}
                         onChange={setEnabled}

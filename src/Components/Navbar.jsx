@@ -7,7 +7,7 @@ import Theme from './Theme';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const { user, LogOut } = useContext(AuthContext);
-    console.log(user);
+
 
 
     return (
@@ -158,7 +158,7 @@ const Navbar = () => {
                                                     <div className='flex-col'>
                                                         <img className='mx-auto mb-2 w-14 rounded-full' src={user?.photoURL} alt=""
                                                             title={user?.displayName} />
-                                                            <p className='my-2'>{user?.displayName}</p>
+                                                        <p className='my-2'>{user?.displayName}</p>
                                                         <Link
                                                             to='/login'
                                                             className="text-sm font-medium  text-white px-3 py-1 border-none hover:bg-red-700 bg-red-600  rounded-2xl      "
@@ -201,7 +201,7 @@ const Navbar = () => {
                                                 </li>
                                                 <li>
                                                     <Link
-                                                        to='/'
+                                                        to='/FAQ'
                                                         aria-label="Our product"
                                                         title="Our product"
                                                         className="font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
@@ -211,7 +211,7 @@ const Navbar = () => {
                                                 </li>
                                                 <li>
                                                     <Link
-                                                        to='/'
+                                                        to='/blogs'
                                                         aria-label="Product pricing"
                                                         title="Product pricing"
                                                         className="font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
@@ -220,14 +220,9 @@ const Navbar = () => {
                                                     </Link>
                                                 </li>
                                                 <li>
-                                                    <Link
-                                                        to='/'
-                                                        aria-label="About us"
-                                                        title="About us"
-                                                        className="font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400"
-                                                    >
-                                                        <Theme></Theme>
-                                                    </Link>
+
+                                                    <Theme></Theme>
+
                                                 </li>
                                             </ul>
                                         </nav>

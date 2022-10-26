@@ -1,124 +1,89 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
     return (
-        <>
-            <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-                <div className="mb-10 border-t border-b divide-y">
-                    <div className="grid py-8 sm:grid-cols-4">
-                        <div className="mb-4 sm:mb-0">
-                            <div className="space-y-1 text-xs font-semibold tracking-wide uppercase">
-                                <a
-                                    href="/"
-                                    className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                                    aria-label="Category"
-                                >
-                                    Books
-                                </a>
-                                <p className="text-gray-600">5 Jan 2020</p>
+        <div className='bg-gray-800 text-white '>
+            <div className="px-4 py-16  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+                <div className="mb-10  divide-y">
+                    <div className="grid py-8 items-center sm:grid-cols-4">
+                        <div className="mb-4  sm:mb-0">
+                            <div className="  text-xl font-bold  tracking-wide uppercase">
+                                What is cors ?
+
                             </div>
                         </div>
                         <div className="sm:col-span-3 lg:col-span-2">
-                            <div className="mb-3">
-                                <a
-                                    href="/"
-                                    aria-label="Article"
-                                    className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
-                                >
-                                    <p className="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
-                                        Tell them I hate them
-                                    </p>
-                                </a>
-                            </div>
-                            <p className="text-gray-700">
-                                Well, the way they make shows is, they make one show. That show's
-                                called a pilot. Then they show that show to the people who make
-                                shows.
+                            <p className="text-white text-xl text-start ">
+                                Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
                             </p>
                         </div>
                     </div>
-                    <div className="grid py-8 sm:grid-cols-4">
-                        <div className="mb-4 sm:mb-0">
-                            <div className="space-y-1 text-xs font-semibold tracking-wide uppercase">
-                                <a
-                                    href="/"
-                                    className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                                    aria-label="Category"
-                                >
-                                    Inspiration
-                                </a>
-                                <p className="text-gray-600">15 Sep 2020</p>
+                    <div className="grid py-8 items-center sm:grid-cols-4">
+                        <div className="mb-4  sm:mb-0">
+                            <div className="  text-xl font-bold  tracking-wide uppercase">
+                                Why I use Firebase ? <br />
+                                It's alternatives ?
                             </div>
                         </div>
                         <div className="sm:col-span-3 lg:col-span-2">
-                            <div className="mb-3">
-                                <a
-                                    href="/"
-                                    aria-label="Article"
-                                    className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
-                                >
-                                    <p className="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
-                                        A flower in my green garden
-                                    </p>
-                                </a>
-                            </div>
-                            <p className="text-gray-700">
-                                Chase ball of string eat plants, meow, and throw up because I ate
-                                plants going to catch the red dot today going.
+                            <p className="text-white text-xl text-start ">
+                                Firebase is great for quick projects: it's easy to set up, fast, in many cases requires only front-end logic. It lets you focus on your app instead of implementing custom authentication, web sockets or database connections.
+
+                                <div className='text-start mx-20'>
+                                    <span className='text-yellow-500'> Some Alternatives ,  </span>
+                                    <li>MongoDB.</li>
+                                    <li>Oracle Database.</li>
+                                    <li>Amazon Redshift.</li>
+                                    <li>DataStax Enterprise.</li>
+                                    <li>Redis Enterprise Cloud.</li>
+                                    <li>Cloudera Enterprise Data Hub.</li>
+                                    <li>Db2.</li>
+                                    <li>Couchbase Server.</li>
+                                </div>
                             </p>
                         </div>
                     </div>
-                    <div className="grid py-8 sm:grid-cols-4">
-                        <div className="mb-4 sm:mb-0">
-                            <div className="space-y-1 text-xs font-semibold tracking-wide uppercase">
-                                <a
-                                    href="/"
-                                    className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                                    aria-label="Category"
-                                >
-                                    Detective
-                                </a>
-                                <p className="text-gray-600">28 Dec 2020</p>
+                    <div className="grid py-8 items-center sm:grid-cols-4">
+                        <div className="mb-4  sm:mb-0">
+                            <div className="  text-xl font-bold  tracking-wide uppercase">
+                                What NODE.JS  ?
+                                <br />
+                                How it runs ?
                             </div>
                         </div>
                         <div className="sm:col-span-3 lg:col-span-2">
-                            <div className="mb-3">
-                                <a
-                                    href="/"
-                                    aria-label="Article"
-                                    className="inline-block text-black transition-colors duration-200 hover:text-deep-purple-accent-700"
-                                >
-                                    <p className="text-3xl font-extrabold leading-none sm:text-4xl xl:text-4xl">
-                                        We never had the love we deserve
-                                    </p>
-                                </a>
-                            </div>
-                            <p className="text-gray-700">
-                                Sportacus andrew weatherall goose Refined gentlemen super mario
-                                des lynam alpha trion zap.
+                            <p className="text-white text-xl text-start  text-start">
+
+                                Node.js is an open-source backend javascript runtime environment. It is a used as backend service where javascript works on the server-side of the application. This way javascript is used on both frontend and backend.
+                                <br /><br />
+                                Node.js runs on chrome v8 engine which converts javascript code into machine code, it is highly scalable, lightweight, fast, and data-intensive. Thats How NODE.js runs .
                             </p>
                         </div>
                     </div>
+                    <div className="grid py-8 items-center sm:grid-cols-4">
+                        <div className="mb-4  sm:mb-0">
+                            <div className="  text-xl font-bold  tracking-wide uppercase">
+                                What is private route ?
+                                <br />
+                                How it works ?
+                            </div>
+                        </div>
+                        <div className="sm:col-span-3 lg:col-span-2">
+                            <p className="text-white text-xl text-start  text-start">
+
+                                The private route component is used to protect selected pages in a React app from unauthenticated users.
+                                <br /><br />
+                                The react private route component renders child components (children) if the user is logged in. If not logged in the user is redirected to the /login page with the return url passed in the location state property.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-                <div className="text-center">
-                    <a
-                        href="/"
-                        aria-label=""
-                        className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-                    >
-                        See all articles
-                        <svg
-                            className="inline-block w-3 ml-2"
-                            fill="currentColor"
-                            viewBox="0 0 12 12"
-                        >
-                            <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
-                        </svg>
-                    </a>
-                </div>
+
             </div>
 
-        </>
+        </div>
     );
 };
 

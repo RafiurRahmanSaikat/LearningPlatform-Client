@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import AllCourse from "../Components/AllCourse";
+import Blogs from "../Components/Blogs";
 import Checkout from "../Components/Checkout";
 import CourseDetails from "../Components/CourseDetails";
 import Error404 from "../Components/Error404";
@@ -40,6 +41,7 @@ export const router = createBrowserRouter([
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
             },
             { path: 'FAQ', element: <FAQ></FAQ> },
+            { path: '/blogs', element: <Blogs></Blogs> },
         ])
     },
     {

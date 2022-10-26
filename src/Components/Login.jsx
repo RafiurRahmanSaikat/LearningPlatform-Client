@@ -25,7 +25,7 @@ const Login = () => {
         login(email, password)
             .then((res) => {
                 const user = res.user;
-                console.log(user);
+     
                 setError("You are successfully logged in")
                 navigate(from, { replace: true });
             })

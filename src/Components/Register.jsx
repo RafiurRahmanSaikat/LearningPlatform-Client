@@ -16,7 +16,7 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const ConfrimPassword = form.ConfrimPassword.value;
-        console.log(mobile, name);
+
         const Profile = { displayName: name, photoURL: photo, phoneNumber: mobile }
 
         setError("")
@@ -31,7 +31,7 @@ const Register = () => {
         SignUp(email, password)
             .then((res) => {
                 const user = res.user;
-                console.log(user);
+
                 form.reset()
                 setProfile(Profile)
                     .then(result => { })

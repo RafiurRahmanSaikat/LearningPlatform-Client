@@ -4,7 +4,7 @@
 # Tech world is learning platform in Bangladesh .
 
 
-![Logo](./src/Assest/)
+![Logo](./src/Assest/favicon.jpg)
 
 
 # Links

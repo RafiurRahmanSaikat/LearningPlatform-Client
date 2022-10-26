@@ -6,15 +6,18 @@ const Checkout = () => {
     return (
         <>
             <section className=' bg-gray-800'>
+                <p className='text-5xl font-semibold text-orange-500  p-8'>Checkout This Course</p>
                 <div className="flex mx-auto ">
-                    <div className="grid grid-cols-1 md:grid-cols-2">
+                    <div className="grid grid-cols-1 md:grid-cols-2 ">
                         <div className="bg-gray-800 text-white ">
                             <section className="text-white body-font bg-gray-800 overflow-hidden">
                                 <div className="container py-8 mx-auto">
                                     <div className="lg:w-[100%] p-8 mx-auto flex flex-wrap">
-                                        <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src={img} />
-                                        <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                        
+                                        <img alt="ecommerce"
+                                            className="lg:w-[80%] w-full mx-auto lg:h-auto h-[100%] rounded" src={img} />
+
+                                        <div className=" mx-auto mt-6 ">
+
                                             <h1 className="text-white text-3xl title-font font-medium mb-1">{title}</h1>
                                             <p className='text-2xl my-4 text-gray-200 font-bold'>Category : <span className='underline'> {category}</span></p>
                                             <span className="flex items-center">
@@ -36,21 +39,19 @@ const Checkout = () => {
                                                 <span className="text-gray-100 ml-3">4 Reviews</span>
                                             </span>
                                             <p className="leading-relaxed text-gray-300">{description}</p>
-                                            <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-                                            </div>
                                             <p className='font-semibold mt-2 text-orange-400'><span className='text-white text-sm'>Price :</span> {price} TK/=</p>
                                         </div>
                                     </div>
+
                                 </div>
                             </section>
                         </div>
-                        <section>
-                            <div className="bg-gray-800 py-12 md:py-24">
-                                <div className="mx-auto max-w-lg px-4 lg:px-8">
-                                    <form className="grid grid-cols-6 gap-4">
-                                       
 
-                                        
+
+                        <section className=''>
+                            <div className="bg-gray-800 mx-auto py-12 md:py-24">
+                                <div className="mx-auto w-[80%]  p-4">
+                                    <form className="grid grid-cols-6 gap-4">
 
                                         <div className="col-span-6">
                                             <label className="mb-1 block text-sm text-white" htmlFor="email">
@@ -178,7 +179,7 @@ const Checkout = () => {
 
                                         <div className="col-span-6">
                                             <button
-                                                className="block w-full rounded-lg bg-black p-2.5 text-sm text-white"
+                                                className="block w-full rounded-lg bg-orange-500 p-2.5 text-sm text-white"
                                                 type="submit"
                                             >
                                                 Pay Now

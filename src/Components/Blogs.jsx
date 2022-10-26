@@ -9,7 +9,7 @@ const Blogs = () => {
                     <div className="grid py-8 items-center sm:grid-cols-4">
                         <div className="mb-4  sm:mb-0">
                             <div className="  text-xl font-bold  tracking-wide uppercase">
-                                What is cors ?
+                                <p> What is cors ?</p>
 
                             </div>
                         </div>
@@ -22,8 +22,8 @@ const Blogs = () => {
                     <div className="grid py-8 items-center sm:grid-cols-4">
                         <div className="mb-4  sm:mb-0">
                             <div className="  text-xl font-bold  tracking-wide uppercase">
-                                Why I use Firebase ? <br />
-                                It's alternatives ?
+                                <p>Why I use Firebase ? <br />
+                                    It's alternatives ?</p>
                             </div>
                         </div>
                         <div className="sm:col-span-3 lg:col-span-2">
@@ -47,9 +47,9 @@ const Blogs = () => {
                     <div className="grid py-8 items-center sm:grid-cols-4">
                         <div className="mb-4  sm:mb-0">
                             <div className="  text-xl font-bold  tracking-wide uppercase">
-                                What NODE.JS  ?
-                                <br />
-                                How it runs ?
+                                <p>What NODE.JS  ?
+                                    <br />
+                                    How it runs ?</p>
                             </div>
                         </div>
                         <div className="sm:col-span-3 lg:col-span-2">
@@ -64,9 +64,9 @@ const Blogs = () => {
                     <div className="grid py-8 items-center sm:grid-cols-4">
                         <div className="mb-4  sm:mb-0">
                             <div className="  text-xl font-bold  tracking-wide uppercase">
-                                What is private route ?
-                                <br />
-                                How it works ?
+                                <p> What is private route ?
+                                    <br />
+                                    How it works ?</p>
                             </div>
                         </div>
                         <div className="sm:col-span-3 lg:col-span-2">

@@ -93,7 +93,7 @@ const Checkout = () => {
                                                 Card Details
                                             </legend>
 
-                                            <div className="-space-y-px rounded-lg bg-white shadow-sm">
+                                            <div className="-space-y-px rounded-lg bg-gray-800 shadow-sm">
                                                 <div>
                                                     <label className="sr-only" htmlFor="card-number">Card Number</label>
 
@@ -141,7 +141,7 @@ const Checkout = () => {
                                                 Billing Address
                                             </legend>
 
-                                            <div className="-space-y-px rounded-lg bg-white shadow-sm">
+                                            <div className="-space-y-px rounded-lg bg-gray-800 shadow-sm">
                                                 <div>
                                                     <label className="sr-only" htmlFor="country">Country</label>
 
